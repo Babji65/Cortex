@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'Reality Hyper';
+  src: url('fonts/Reality_Hyper_Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  width: 320px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #2d3748;
+}
+
+.container {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.header h1 {
+  font-family: 'Reality Hyper';
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #4a5568;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  color: #4a5568;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"] {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.input-group input[type="number"] {
+  width: 60px;
+  text-align: center;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: #4299e1;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.btn-danger {
+  background-color: #f56565;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.site-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.site-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.site-list li:last-child {
+  border-bottom: none;
+}
+
+.site-list button {
+  padding: 4px 8px;
+  font-size: 12px;
+  background-color: #f56565;
+  color: white;
+}
+
+.timer-inputs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.timer-display {
+  text-align: center;
+  margin: 16px 0;
+}
+
+.timer-display span:first-child {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: monospace;
+  color: #4299e1;
+}
+
+.timer-display span:last-child {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #718096;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cbd5e0;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4299e1;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}

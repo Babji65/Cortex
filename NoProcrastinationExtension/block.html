@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cortex - Site Blocked</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      background-color: #f8f9fa;
+    }
+    .block-container {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #e53e3e;
+      margin-bottom: 15px;
+    }
+    p {
+      color: #4a5568;
+      margin-bottom: 25px;
+    }
+    .button-group {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    #goBack {
+      background-color: #e2e8f0;
+      color: #4a5568;
+    }
+    #allowSite {
+      background-color: #4299e1;
+      color: white;
+    }
+    button:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+  <div class="block-container">
+    <h1>Site Blocked</h1>
+    <div id="motivationMessage">Stay focused on your work!</div>
+    <p>This website is not on your allowed list during focus time.</p>
+    <div class="button-group">
+      <button id="goBack">Go Back</button>
+      <button id="allowSite">Allow This Site</button>
+    </div>
+  </div>
+  <script src="block.js"></script>
+  <script src="motivation.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+[mild] Maybe take a moment to refocus?
+[mild] This might not be the best use of your time
+[mild] Consider if this aligns with your priorities
+[mild] Your future self might appreciate more focus
+[mild] Small breaks can help refresh your perspective
+[mild] Remember what you planned to accomplish today
+[mild] This website will still be here later
+[mild] Your goals deserve your full attention
+[mild] Distractions can wait - your work can't
+[mild] Take a deep breath and return to your tasks
+[mild] You're capable of amazing concentration
+[mild] Every minute counts toward your success
+[mild] This moment is perfect for making progress
+[mild] Your willpower is stronger than this temptation
+[mild] Stay present with what really matters
+[mild] You'll feel better after making progress
+[mild] Small steps lead to big accomplishments
+[mild] Your focus is your superpower
+[mild] The best time to work is always now
+[mild] Your potential is greater than this distraction
+[mild] Success comes from consistent effort
+[mild] You'll be proud when you complete your tasks
+[mild] Stay strong against digital temptations
+[mild] Your dreams deserve your attention
+[mild] This is a test of your discipline
+[mild] Your work is waiting patiently for you
+[mild] Distractions are temporary, results last
+[mild] You're better than mindless browsing
+[mild] Your time is precious - use it wisely
+[mild] Progress feels better than procrastination
+[mild] The hardest part is often just starting
+[mild] You've got this - just focus for now
+[medium] You're starting to get distracted
+[medium] This isn't helping your productivity
+[medium] Important work needs your attention
+[medium] You're better than this distraction
+[medium] Stop procrastinating and refocus
+[medium] Your time is valuable - don't waste it
+[medium] You have more important things to do
+[medium] This website won't help your goals
+[medium] Focus on what really matters now
+[medium] You're letting time slip away
+[medium] Don't fall into the procrastination trap
+[medium] Your success depends on current focus
+[medium] This is an unnecessary distraction
+[medium] Will this matter tomorrow? Probably not
+[medium] You're stronger than this temptation
+[medium] Get back to work - future you will thank you
+[medium] Your goals require your attention
+[medium] This isn't time for casual browsing
+[medium] Stay disciplined and return to tasks
+[medium] Every minute here delays your progress
+[medium] Warning: You're slipping off track
+[medium] Alert: Your productivity is dropping
+[medium] Attention: Your willpower is being tested
+[medium] Notice: This isn't serving you well
+[medium] Reminder: Your time is limited
+[medium] Caution: Distractions ahead
+[medium] Heads up: Your work needs you
+[medium] Warning: Your focus is drifting
+[medium] Alert: Your priorities are calling
+[medium] Notice: This isn't what you planned
+[medium] Reminder: Action creates results
+[medium] Caution: Procrastination detected
+[medium] Heads up: Future you is watching
+[medium] Warning: Time is passing quickly
+[medium] Alert: Your discipline is slipping
+[medium] Notice: This isn't helping you
+[medium] Reminder: Important work awaits
+[medium] Caution: Distraction level rising
+[medium] Heads up: Your potential is waiting
+[harsh] STOP WASTING TIME RIGHT NOW!
+[harsh] CLOSE THIS TAB IMMEDIATELY!
+[harsh] YOU'RE PROCRASTINATING - STOP!
+[harsh] THIS IS COMPLETE TIME WASTAGE!
+[harsh] GET BACK TO WORK THIS INSTANT!
+[harsh] YOU'RE BETTER THAN THIS - CLOSE IT!
+[harsh] THIS SITE IS STEALING YOUR FUTURE!
+[harsh] WHAT ARE YOU DOING? WORK NOW!
+[harsh] YOU'RE SABOTAGING YOUR SUCCESS!
+[harsh] ENOUGH! CLOSE THIS AND FOCUS!
+[harsh] THIS IS UNACCEPTABLE BEHAVIOR!
+[harsh] YOU'RE LETTING YOURSELF DOWN!
+[harsh] STOP SCROLLING AND START WORKING!
+[harsh] THIS IS A TOTAL WASTE OF TIME!
+[harsh] YOUR FUTURE SELF WILL REGRET THIS!
+[harsh] WAKE UP AND CLOSE THIS TAB NOW!
+[harsh] YOU'RE BEING LAZY - STOP IT!
+[harsh] THIS IS NOT HELPING YOU AT ALL!
+[harsh] YOU'RE THROWING AWAY PRECIOUS TIME!
+[harsh] ENOUGH PROCRASTINATION - WORK NOW!
+[harsh] RED ALERT: CLOSE THIS TAB NOW!
+[harsh] EMERGENCY: STOP PROCRASTINATING!
+[harsh] CRITICAL WARNING: GET TO WORK!
+[harsh] FINAL NOTICE: FOCUS OR FAIL!
+[harsh] URGENT: YOUR TIME IS BEING STOLEN!
+[harsh] LAST WARNING: STOP WASTING TIME!
+[harsh] SYSTEM ALERT: PRODUCTIVITY CRASHING!
+[harsh] CODE RED: ABANDON DISTRACTIONS!
+[harsh] PRIORITY OVERRIDE: WORK REQUIRED!
+[harsh] CRISIS MODE: ACTIVATE FOCUS NOW!
+[harsh] ABORT BROWSING - RETURN TO WORK!
+[harsh] THIS IS RIDICULOUS - CLOSE IT!
+[harsh] YOU'RE EMBARRASSING YOURSELF!
+[harsh] STOP THIS NONSENSE IMMEDIATELY!
+[harsh] YOUR WEAKNESS IS SHOWING - FIGHT IT!
+[harsh] THIS IS PATHETIC - DO BETTER!
+[harsh] YOU'RE FAILING YOUR POTENTIAL!
+[harsh] DISGUSTING PROCRASTINATION - STOP!
+[harsh] UNINSTALL THIS TIME-WASTING HABIT!
+[harsh] YOU'RE BETTER THAN THIS BEHAVIOR!

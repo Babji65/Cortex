@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cortex</title>
+  <style>
+    body {
+      width: 320px;
+      padding: 16px;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: #2d3748;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .header h1 {
+      font-size: 20px;
+      margin: 0;
+      color: #4a5568;
+    }
+    .section {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px 0;
+    }
+    .section-header h2 {
+      font-size: 16px;
+      margin: 0;
+      color: #4a5568;
+      pointer-events: none;
+    }
+    .section-toggle {
+      width: 20px;
+      height: 20px;
+      position: relative;
+    }
+    .section-toggle::before,
+    .section-toggle::after {
+      content: '';
+      position: absolute;
+      background-color: #4a5568;
+      transition: transform 0.2s ease;
+    }
+    .section-toggle::before {
+      width: 12px;
+      height: 2px;
+      left: 4px;
+      top: 9px;
+    }
+    .section-toggle::after {
+      width: 2px;
+      height: 12px;
+      left: 9px;
+      top: 4px;
+    }
+    .section-toggle.collapsed::after {
+      transform: rotate(90deg);
+    }
+    .section-content {
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.2s ease;
+      max-height: 500px;
+      opacity: 1;
+    }
+    .section-content.collapsed {
+      max-height: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .input-group {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      align-items: center;
+    }
+    input[type="text"],
+    input[type="number"],
+    select {
+      flex: 1;
+      padding: 8px 12px;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    input[type="number"] {
+      width: 60px;
+      text-align: center;
+    }
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background-color: #4299e1;
+      color: white;
+    }
+    .btn-secondary {
+      background-color: #e2e8f0;
+      color: #4a5568;
+    }
+    .btn-danger {
+      background-color: #f56565;
+      color: white;
+    }
+    .btn-small {
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+    .site-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-height: 150px;
+      overflow-y: auto;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+    }
+    .site-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .site-list li:last-child {
+      border-bottom: none;
+    }
+    .timer-display {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .timer-display span:first-child {
+      font-size: 28px;
+      font-weight: 600;
+      font-family: monospace;
+      color: #4299e1;
+    }
+    .timer-display span:last-child {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #718096;
+    }
+    .timer-controls {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+    }
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #cbd5e0;
+      transition: .4s;
+      border-radius: 20px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #4299e1;
+    }
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+    input[type="range"] {
+      flex: 1;
+      height: 6px;
+      margin: 0 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Cortex</h1>
+    <div class="toggle-container">
+      <span>Blocking</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggleBlocking" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Allowed Websites (not collapsible) -->
+  <div class="section">
+    <h2>Allowed Websites</h2>
+    <div class="input-group">
+      <input type="text" id="newSite" placeholder="example.com">
+      <button id="addSite" class="btn btn-primary">Add</button>
+    </div>
+    <ul id="siteList" class="site-list"></ul>
+  </div>
+
+  <!-- Focus Timer (collapsible) -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Focus Timer</h2>
+      <div class="section-toggle" id="timerToggle"></div>
+    </div>
+    <div class="section-content timer-section-content">
+      <div class="input-group">
+        <label>Study:</label>
+        <input type="number" id="studyMins" min="1" value="25">
+        <span>min</span>
+      </div>
+      <div class="input-group">
+        <label>Break:</label>
+        <input type="number" id="breakMins" min="1" value="5">
+        <span>min</span>
+      </div>
+      <div class="timer-display">
+        <span id="timerDisplay">25:00</span>
+        <span id="timerStatus">Ready</span>
+      </div>
+      <div class="timer-controls">
+        <button id="startTimer" class="btn btn-primary">Start</button>
+        <button id="pauseTimer" class="btn btn-secondary" disabled>Pause</button>
+        <button id="resetTimer" class="btn btn-danger">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Study Music (collapsible) -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Study Music</h2>
+      <div class="section-toggle" id="musicToggle"></div>
+    </div>
+    <div class="section-content music-section-content">
+      <div class="input-group">
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggleMusic">
+          <span class="slider"></span>
+        </label>
+        <span>Enable Study Music</span>
+      </div>
+      <div class="input-group" id="volumeControl" style="display: none;">
+        <label>Volume:</label>
+        <input type="range" id="musicVolume" min="0" max="1" step="0.1" value="0.5">
+      </div>
+    </div>
+  </div>
+
+  <!-- Focus Motivator (collapsible) -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Focus Motivator</h2>
+      <div class="section-toggle" id="motivationToggle"></div>
+    </div>
+    <div class="section-content motivation-section-content">
+      <div class="input-group">
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggleMotivation" checked>
+          <span class="slider"></span>
+        </label>
+        <span>Enable Motivator</span>
+      </div>
+      <div class="input-group">
+        <label>Intensity:</label>
+        <select id="motivationHarshness">
+          <option value="mild">Gentle</option>
+          <option value="medium" selected>Moderate</option>
+          <option value="harsh">Strong</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label>Interval:</label>
+        <input type="number" id="motivationInterval" min="10" max="300" value="60">
+        <span>seconds</span>
+      </div>
+      <div class="input-group">
+        <label>Voice:</label>
+        <select id="motivationVoice"></select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Presets (collapsible) -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Presets</h2>
+      <div class="section-toggle" id="presetsToggle"></div>
+    </div>
+    <div class="section-content presets-section-content">
+      <div class="input-group">
+        <select id="presetSelect">
+          <option value="school">School</option>
+          <option value="personal">Personal</option>
+        </select>
+        <button id="loadPreset" class="btn btn-primary">Load</button>
+      </div>
+      <div class="input-group">
+        <button id="savePreset" class="btn btn-secondary">Save Current to Preset</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
